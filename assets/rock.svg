@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Pedra</title>
+  <desc id="desc">Pedra estilizada para o jogo pedra papel tesoura.</desc>
+  <defs>
+    <linearGradient id="rockBody" x1="52" x2="190" y1="46" y2="208" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d7e0ec"/>
+      <stop offset=".42" stop-color="#94a8bd"/>
+      <stop offset="1" stop-color="#53657a"/>
+    </linearGradient>
+    <linearGradient id="rockEdge" x1="42" x2="178" y1="66" y2="188" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#0b1220" stop-opacity=".16"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#06101d" flood-opacity=".36"/>
+    </filter>
+  </defs>
+  <path fill="#41e5d2" opacity=".2" d="M33 128c0-51 41-92 92-92s92 41 92 92-41 92-92 92-92-41-92-92Z"/>
+  <path
+    filter="url(#shadow)"
+    fill="url(#rockBody)"
+    d="M60 83c16-29 55-43 88-29 9 4 17 12 24 22l26 12c11 6 17 17 15 30l-5 35c-2 12-10 22-22 27l-54 22c-12 5-26 5-38-1l-38-18c-11-5-19-15-21-27l-7-35c-2-13 3-26 14-33l18-5Z"
+  />
+  <path
+    fill="url(#rockEdge)"
+    d="M74 88c9-18 34-27 57-23 12 2 23 9 29 20l-35 7-25 28-40-14 14-18Zm50 43 40-33 30 11-4 36-43-6-23-8Zm-69-8 43 16 12 42-35-13c-10-4-17-12-18-23l-2-22Zm72 25 53 8-41 24c-10 6-23 7-34 1l-4-2 26-31Z"
+  />
+  <path fill="#f8fbff" opacity=".36" d="M83 86c9-9 29-16 44-12 5 1 7 6 3 9-15 10-34 12-48 11-5 0-6-5 1-8Z"/>
+</svg>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedra Papel Tesoura</title>
+    <link rel="preload" href="assets/arena-bg.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-wash" aria-hidden="true"></div>
+
+    <section class="entry-screen" id="entryScreen" aria-labelledby="entryTitle">
+      <div class="entry-panel">
+        <p class="kicker">Arcade de duelo</p>
+        <h1 id="entryTitle">Pedra Papel Tesoura</h1>
+
+        <form id="playerForm" class="entry-form">
+          <label for="username">Nome de usuário</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            maxlength="18"
+            autocomplete="nickname"
+            placeholder="Seu nome"
+            required
+          />
+
+          <div class="difficulty-group" aria-labelledby="difficultyTitle">
+            <span id="difficultyTitle">Dificuldade</span>
+            <div class="difficulty-picker" role="radiogroup">
+              <button
+                type="button"
+                class="difficulty-option is-active"
+                data-difficulty="easy"
+                role="radio"
+                aria-checked="true"
+              >
+                <strong>Fácil</strong>
+                <span>75%</span>
+              </button>
+              <button
+                type="button"
+                class="difficulty-option"
+                data-difficulty="medium"
+                role="radio"
+                aria-checked="false"
+              >
+                <strong>Médio</strong>
+                <span>20%</span>
+              </button>
+              <button
+                type="button"
+                class="difficulty-option"
+                data-difficulty="impossible"
+                role="radio"
+                aria-checked="false"
+              >
+                <strong>Impossível</strong>
+                <span>1%</span>
+              </button>
+            </div>
+          </div>
+
+          <button class="primary-action" type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+
+    <main class="game-screen" id="gameScreen" hidden>
+      <header class="topbar">
+        <div>
+          <p class="kicker">Pedra Papel Tesoura</p>
+          <h2 id="playerGreeting">Boa sorte</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" id="resetButton" type="button">Zerar</button>
+          <button class="ghost-button" id="changePlayerButton" type="button">Trocar</button>
+        </div>
+      </header>
+
+      <section class="score-strip" aria-label="Pontuação">
+        <article class="score-item">
+          <span id="playerNameScore">Player</span>
+          <strong id="playerScore">0</strong>
+        </article>
+        <article class="score-item">
+          <span>Empates</span>
+          <strong id="drawScore">0</strong>
+        </article>
+        <article class="score-item">
+          <span>Bot</span>
+          <strong id="botScore">0</strong>
+        </article>
+      </section>
+
+      <section class="arena" id="arena" aria-live="polite">
+        <div class="fighter" id="playerFighter">
+          <span class="fighter-name" id="playerArenaName">Player</span>
+          <div class="hand-frame">
+            <img id="playerHand" src="assets/rock.svg" alt="Escolha do jogador" />
+          </div>
+        </div>
+
+        <div class="round-center">
+          <div class="round-pill" id="roundPill">Rodada 0</div>
+          <div class="result-text" id="resultText">Escolha sua jogada</div>
+          <div class="difficulty-badge" id="difficultyBadge">Fácil · 75%</div>
+        </div>
+
+        <div class="fighter bot" id="botFighter">
+          <span class="fighter-name">Bot</span>
+          <div class="hand-frame">
+            <img id="botHand" src="assets/paper.svg" alt="Escolha do bot" />
+          </div>
+        </div>
+
+        <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+      </section>
+
+      <section class="choice-dock" aria-label="Escolhas">
+        <button class="choice-card" type="button" data-move="rock">
+          <img src="assets/rock.svg" alt="" />
+          <span>Pedra</span>
+        </button>
+        <button class="choice-card" type="button" data-move="paper">
+          <img src="assets/paper.svg" alt="" />
+          <span>Papel</span>
+        </button>
+        <button class="choice-card" type="button" data-move="scissors">
+          <img src="assets/scissors.svg" alt="" />
+          <span>Tesoura</span>
+        </button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
