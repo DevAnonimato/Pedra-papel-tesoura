@@ -193,6 +193,53 @@ input:focus {
   background: rgba(255, 255, 255, 0.09);
 }
 
+.sound-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.sound-icon {
+  position: relative;
+  width: 20px;
+  height: 18px;
+}
+
+.sound-icon::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  clip-path: polygon(0 28%, 42% 28%, 100% 0, 100% 100%, 42% 72%, 0 72%);
+}
+
+.sound-icon::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 3px;
+  width: 8px;
+  height: 12px;
+  border: 2px solid var(--teal);
+  border-left: 0;
+  border-radius: 0 999px 999px 0;
+}
+
+.sound-toggle[aria-pressed="false"] .sound-icon::after {
+  left: 9px;
+  top: 8px;
+  width: 12px;
+  height: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--coral);
+  transform: rotate(-42deg);
+}
+
 .game-screen {
   min-height: 100vh;
   display: grid;

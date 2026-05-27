@@ -1,6 +1,6 @@
 # Pedra Papel Tesoura
 
-Jogo web de Pedra, Papel e Tesoura com nome de usuário, bot, pontuação, animações e três dificuldades:
+Jogo web de Pedra, Papel e Tesoura com nome de usuário, bot, pontuação, animações, sons imersivos e três dificuldades:
 
 - Fácil
 - Médio
@@ -14,5 +14,5 @@ Abra `index.html` no navegador.
 
 - `index.html`: estrutura da tela de entrada e do jogo
 - `styles.css`: visual, responsividade e animações
-- `script.js`: lógica de dificuldade, placar e rodadas
+- `script.js`: lógica de dificuldade, placar, rodadas e sons com Web Audio API
 - `assets/`: imagens do jogo
