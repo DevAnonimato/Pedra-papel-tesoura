@@ -143,29 +143,23 @@ input:focus {
 
 .difficulty-option {
   display: grid;
-  gap: 4px;
+  place-items: center;
   min-height: 74px;
   padding: 12px;
   color: var(--ink);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
-  text-align: left;
+  text-align: center;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
     background 180ms ease;
 }
 
-.difficulty-option strong,
-.difficulty-option span {
+.difficulty-option strong {
   display: block;
   overflow-wrap: anywhere;
-}
-
-.difficulty-option span {
-  color: var(--muted);
-  font-weight: 800;
 }
 
 .difficulty-option:hover {

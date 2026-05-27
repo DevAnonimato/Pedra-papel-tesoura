@@ -22,19 +22,19 @@ const moves = {
 const difficulty = {
   easy: {
     label: "Fácil",
-    badge: "Fácil · 75%",
+    badge: "Fácil",
     playerWinChance: 0.75,
     drawChance: 0.12,
   },
   medium: {
     label: "Médio",
-    badge: "Médio · 20%",
+    badge: "Médio",
     playerWinChance: 0.2,
     drawChance: 0.2,
   },
   impossible: {
     label: "Impossível",
-    badge: "Impossível · 1%",
+    badge: "Impossível",
     playerWinChance: 0.01,
     drawChance: 0.09,
   },

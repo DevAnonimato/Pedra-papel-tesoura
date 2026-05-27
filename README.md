@@ -2,9 +2,9 @@
 
 Jogo web de Pedra, Papel e Tesoura com nome de usuário, bot, pontuação, animações e três dificuldades:
 
-- Fácil: 75% de chance de vitória do jogador
-- Médio: 20% de chance de vitória do jogador
-- Impossível: 1% de chance de vitória do jogador
+- Fácil
+- Médio
+- Impossível
 
 ## Como abrir
 
